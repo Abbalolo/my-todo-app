@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap');
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.all-todo, .active-todo, .completed-todo{
+  padding: 2em;
+  width: 400px;
+  transition: .8s all;
+  height: 100%;
+
+ 
+}
+
+h1{
+  text-align: center;
+}
+
+ .links {
+    padding: .5em 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .8s all;
+  }
+
+ .links a{
+    text-decoration: none;
+font-size: 13px;
+font-weight: 600;
+line-height: 17px;
+letter-spacing: 0em;
+color: #333333;
+position: relative;
+padding: 0 1em;
+
+  }
+
+  .alink.active::after{
+content: "";
+position: absolute;
+width: 100%;
+height: 3px;
+left: 0;
+bottom: -.7em;
+background: #2F80ED;
+border-radius: 10px;
+
+  }
+
+  .line{
+   border: 1.5px solid #BDBDBD;
+   margin-bottom: .7em;
+  }
+
+  form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-text{
+    width: 310px;
+    padding: .5em;
+    border-radius: 12px;
+    border: 1px solid #BDBDBD;
+    outline: none;
+
+  }
+  .input-text:focus{
+    border: 1px solid #2F80ED;
+  }
+    
+    .add-btn{
+      width: 60px;
+      padding: .5em .2em;
+      border:none;
+      font-size: 12px;
+      border-radius: 12px;
+      background: #2F80ED;
+      color: #fff;
+      cursor: pointer;
+
+
+    }
+    .delete-btn{
+      padding: .5em 1em;
+      border:none;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: white;
+  
+    
+
+
+    }
+    .deleteAll-btn{
+      padding: .5em 1em;
+      border:none;
+      font-size: 12px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      background: #2F80ED;
+
+
+    }
+
+    .todo-item-container{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: .5em;
+    }
+  
+    .todo-item-container-active{
+     display: flex;
+     align-items: center;
+     gap: .5em;
+    }
+  
+        
+    .input-check{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 5px;
+    }
+
+    .check:checked + p{
+      text-decoration: line-through;
+      color: #BDBDBD;
+     
+    }
+
